@@ -22,7 +22,7 @@ window.addEventListener('keydown',e => {
         // input으로 입력받은 숫자를 3개의 숫자로 쪼개는 로직 -> 나누기를 이용할 예정, 키 입력 내부에 있어야 됨
         let inputA = Math.floor(input.value/100);
         console.log(inputA);
-        let inputB = input.value.slice(1);
+        let inputB = Math.floor(input.value.slice(1)/10);
         console.log(inputB);
     }
 });
