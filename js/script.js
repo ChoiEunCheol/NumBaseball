@@ -34,9 +34,6 @@ function makeRandomNum() {
 
 makeRandomNum();
 
-// 입력값과 랜덤 숫자 비교 로직 생성
-function compareNum() {}
-
 // 엔터키 입력 시 이벤트 설정
 window.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
@@ -45,8 +42,17 @@ window.addEventListener("keydown", (e) => {
     let inputB = Math.floor(input.value.slice(1) / 10);
     let inputC = Number(input.value.slice(2));
     let arrayInputValue = [inputA, inputB, inputC];
+
+    // 입력값과 랜덤 숫자 비교 로직 생성
+    function compare(x){
+        arrayRandomNum.indexOf(x);
+    }
+
+    function matching() {
+        console.log(compare);
+    }
     
-    console.log(arrayRandomNum.indexOf(1));
+    matching();
   }
   if (e.key === "q"){
     makeRandomNum();
