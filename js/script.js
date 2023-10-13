@@ -24,5 +24,7 @@ window.addEventListener('keydown',e => {
         console.log(inputA);
         let inputB = Math.floor(input.value.slice(1)/10);
         console.log(inputB);
+        let inputC = input.value.slice(2);
+        console.log(inputC)
     }
 });
