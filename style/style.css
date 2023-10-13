@@ -21,11 +21,14 @@
 #root #right #best {
   width: 20vw;
   height: 10vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
   background-color: yellow;
 }
 #root #right #count {
   width: 20vw;
   height: 10vh;
+  margin-bottom: 10vh;
   background-color: gray;
 }
 
