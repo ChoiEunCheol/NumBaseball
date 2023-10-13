@@ -2,6 +2,7 @@ const left = document.getElementById("left");
 const best = document.getElementById("best");
 const count = document.getElementById("count");
 const input = document.getElementById("input");
+const btn = document.getElementById('button');
 
 //랜덤한 3자리 숫자 생성 , 3자리 숫자는 100*a + 10*b + c 의 형태로 구성
 let RandomNum = 0;
