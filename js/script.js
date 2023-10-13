@@ -10,6 +10,11 @@ const input = document.getElementById('input');
 
     let RandomNum = 100*a+10*b+c;
 
+// 입력값과 랜덤 숫자 비교 로직 생성
+function compareNum() {
+    
+};
+
 // 엔터키 입력 시 이벤트 설정
 window.addEventListener('keydown',e => {
     if (e.key === "Enter"){
