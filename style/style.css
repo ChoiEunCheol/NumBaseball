@@ -13,6 +13,8 @@
 #root #right {
   width: 30vw;
   height: 100vh;
+  margin-top: 5vh;
+  margin-left: 5vw;
 }
 #root #right #best {
   width: 20vw;
