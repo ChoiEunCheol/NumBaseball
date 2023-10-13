@@ -15,12 +15,12 @@
 #root #right #best {
   width: 20vw;
   height: 10vh;
-  background-color: red;
+  background-color: yellow;
 }
 #root #right #count {
   width: 20vw;
   height: 10vh;
-  background-color: blue;
+  background-color: gray;
 }
 
 /*# sourceMappingURL=style.css.map */
