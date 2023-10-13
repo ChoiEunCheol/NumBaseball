@@ -5,4 +5,7 @@ const input = document.getElementById('input');
 
 window.addEventListener('keydown',e => {
     console.log(e.key);
+    if (e.key === "Enter"){
+        alert("ㅇㅇ");
+    }
 })
