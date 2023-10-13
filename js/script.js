@@ -8,6 +8,8 @@ let a = Math.floor(Math.random()*9+1);
 let b = Math.floor(Math.random()*10);
 let c = Math.floor(Math.random()*10);
 
+let arrayRandomNum = [a, b, c];
+
 let RandomNum = 100*a+10*b+c;
 
 
@@ -21,10 +23,9 @@ window.addEventListener('keydown',e => {
     if (e.key === "Enter"){
         // input으로 입력받은 숫자를 3개의 숫자로 쪼개는 로직 -> 나누기를 이용할 예정, 키 입력 내부에 있어야 됨
         let inputA = Math.floor(input.value/100);
-        console.log(inputA);
         let inputB = Math.floor(input.value.slice(1)/10);
-        console.log(inputB);
         let inputC = input.value.slice(2);
-        console.log(inputC)
+
+        console.log(arrayRandomNum);
     }
 });
