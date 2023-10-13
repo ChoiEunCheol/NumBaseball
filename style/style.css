@@ -13,5 +13,13 @@
   width: 30vw;
   height: 100vh;
 }
+#root #right #best {
+  width: 20vw;
+  height: 10vh;
+}
+#root #right #count {
+  width: 20vw;
+  height: 10vh;
+}
 
 /*# sourceMappingURL=style.css.map */
