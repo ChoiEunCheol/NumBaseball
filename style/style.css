@@ -1,7 +1,6 @@
 #root {
   width: 100vw;
   height: 100vh;
-  background-color: yellow;
   display: flex;
 }
 #root #left {
@@ -16,10 +15,12 @@
 #root #right #best {
   width: 20vw;
   height: 10vh;
+  background-color: red;
 }
 #root #right #count {
   width: 20vw;
   height: 10vh;
+  background-color: blue;
 }
 
 /*# sourceMappingURL=style.css.map */
