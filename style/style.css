@@ -17,6 +17,7 @@
   margin-left: 5vw;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 #root #right #best {
   width: 20vw;
