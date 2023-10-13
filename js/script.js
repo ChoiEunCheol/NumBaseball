@@ -8,7 +8,7 @@ const input = document.getElementById('input');
 // 엔터키 입력 시 이벤트 설정
 window.addEventListener('keydown',e => {
     if (e.key === "Enter"){
-        let a = Math.random()
+        let a = Math.floor(Math.random()*10)
         console.log(a);
     }
 })
