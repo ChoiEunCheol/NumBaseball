@@ -5,6 +5,7 @@ const input = document.getElementById("input");
 
 //랜덤한 3자리 숫자 생성 , 3자리 숫자는 100*a + 10*b + c 의 형태로 구성
 let RandomNum = 0;
+let arrayRandomNum = [];
 
 function makeRandomNum() {
   let a = Math.floor(Math.random() * 9 + 1);
@@ -23,7 +24,10 @@ function makeRandomNum() {
     }
   }
 
-  let arrayRandomNum = [a, b, c];
+    arrayRandomNum[0] = a;
+    arrayRandomNum[1] = b;
+    arrayRandomNum[2] = c;
+
 
   RandomNum = 100 * a + 10 * b + c;
 }
@@ -41,7 +45,8 @@ window.addEventListener("keydown", (e) => {
     let inputB = Math.floor(input.value.slice(1) / 10);
     let inputC = Number(input.value.slice(2));
     let arrayInputValue = [inputA, inputB, inputC];
-    console.log(RandomNum);
+    
+    console.log(arrayRandomNum.indexOf(1));
   }
   if (e.key === "q"){
     makeRandomNum();
