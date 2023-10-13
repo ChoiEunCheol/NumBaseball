@@ -5,6 +5,6 @@ const input = document.getElementById('input');
 
 window.addEventListener('keydown',e => {
     if (e.key === "Enter"){
-        alert("ㅇㅇ");
+        alert(input.value);
     }
 })
