@@ -1,0 +1,25 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  background-color: yellow;
+  display: flex;
+}
+#root #left {
+  width: 70vw;
+  height: 100vh;
+  background-color: violet;
+}
+#root #right {
+  width: 30vw;
+  height: 100vh;
+}
+#root #right #best {
+  width: 20vw;
+  height: 10vh;
+}
+#root #right #count {
+  width: 20vw;
+  height: 10vh;
+}
+
+/*# sourceMappingURL=style.css.map */
