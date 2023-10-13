@@ -32,6 +32,7 @@
 #root #right input {
   width: 20vw;
   height: 10vh;
+  font-size: 3rem;
 }
 #root #right button {
   width: 20vw;
