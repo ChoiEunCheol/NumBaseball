@@ -2,6 +2,7 @@
   width: 100vw;
   height: 100vh;
   background-color: yellow;
+  display: flex;
 }
 #root #left {
   width: 70vw;
