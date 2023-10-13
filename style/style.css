@@ -6,6 +6,8 @@
 #root #left {
   width: 50vw;
   height: 100vh;
+  margin-top: 5vh;
+  margin-left: 5vw;
   background-color: violet;
 }
 #root #right {
