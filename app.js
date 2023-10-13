@@ -8,8 +8,13 @@ const contextType = {
 
 // 서버 생성
 const server = http.createServer((request,response)=>{
-    response.writeHead(200, contextType);
-    response.end("ㅇㅇ");
+    if(request.method === 'GET' && request.url === '/'){
+        response.writeHead(200, contextType);
+        response.end("ㅇㅇ");
+    }
+    if(request.method === 'GET' && request.url === '/1'){
+        response.writeHead(200, contextType);
+        response.end("ㄴㄴ");}
 })
 
 server.listen(8080);
