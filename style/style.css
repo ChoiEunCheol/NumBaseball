@@ -9,5 +9,9 @@
   height: 100vh;
   background-color: violet;
 }
+#root #right {
+  width: 30vw;
+  height: 100vh;
+}
 
 /*# sourceMappingURL=style.css.map */
