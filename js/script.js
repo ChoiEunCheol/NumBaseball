@@ -4,9 +4,13 @@ const count = document.getElementById('count');
 const input = document.getElementById('input');
 
 //랜덤한 3자리 숫자 생성 , 3자리 숫자는 100*a + 10*b + c 의 형태로 구성
-let a = Math.floor(Math.random()*9+1);
-let b = Math.floor(Math.random()*10);
-let c = Math.floor(Math.random()*10);
+function randomNum() {
+    let a = Math.floor(Math.random()*9+1);
+    let b = Math.floor(Math.random()*10);
+    let c = Math.floor(Math.random()*10);
+}
+
+randomNum()
 
 let arrayRandomNum = [a, b, c];
 
@@ -25,9 +29,8 @@ window.addEventListener('keydown',e => {
         let inputA = Math.floor(input.value/100);
         let inputB = Math.floor(input.value.slice(1)/10);
         let inputC = Number(input.value.slice(2));
-
         let arrayInputValue = [inputA, inputB, inputC];
 
-        console.log(arrayInputValue);
+        compareNum();
     }
 });
