@@ -26,6 +26,8 @@ window.addEventListener('keydown',e => {
         let inputB = Math.floor(input.value.slice(1)/10);
         let inputC = input.value.slice(2);
 
-        console.log(arrayRandomNum);
+        let arrayInputValue = [inputA, inputB, inputC];
+
+        console.log(arrayInputValue);
     }
 });
