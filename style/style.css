@@ -31,5 +31,9 @@
   margin-bottom: 10vh;
   background-color: gray;
 }
+#root #right button {
+  width: 20vw;
+  height: 10vh;
+}
 
 /*# sourceMappingURL=style.css.map */
