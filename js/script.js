@@ -95,10 +95,10 @@ window.addEventListener("keydown", (e) => {
     compare();
     
   };
+});
 
-
-  if (e.key === "q"){
+// 버튼 클릭 시 리셋
+btn.addEventListener('click',()=>{
     makeRandomNum();
     console.log(RandomNum);
-  }
-});
+})
