@@ -34,6 +34,12 @@ function makeRandomNum() {
 
 makeRandomNum();
 
+// 태그 생성 함수
+function tagMaker (tagname,parentsTag,text){
+    const tag = document.createElement(tagname)
+    parentsTag.append(tag,text)
+};
+
 // 엔터키 입력 시 이벤트 설정
 window.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
@@ -81,10 +87,12 @@ window.addEventListener("keydown", (e) => {
         if (compareC === 1){
             ball ++;
         }
-        console.log(strike,ball);
+        
+        tagMaker('div',left,`${strike} strike ${ball} ball`);
     };
 
     compare();
+    
   };
 
 
