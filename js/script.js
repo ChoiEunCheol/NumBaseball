@@ -101,4 +101,5 @@ window.addEventListener("keydown", (e) => {
 btn.addEventListener('click',()=>{
     makeRandomNum();
     console.log(RandomNum);
+    left.replaceChildren();
 })
