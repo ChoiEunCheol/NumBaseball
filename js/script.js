@@ -13,7 +13,12 @@ while(true){
         break;
     }
 }
-// let c = Math.floor(Math.random()*10);
+while(true){
+    c = Math.floor(Math.random()*10);
+    if (a!==c && b!==c){
+        break;
+    }
+}
 
 let arrayRandomNum = [a, b, c];
 
