@@ -4,5 +4,5 @@ const count = document.getElementById('count');
 const input = document.getElementById('input');
 
 window.addEventListener('keydown',e => {
-    console.log(e);
+    console.log(e.key);
 })
