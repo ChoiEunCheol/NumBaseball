@@ -41,60 +41,62 @@ function tagMaker(tagname, parentsTag, text) {
   parentsTag.append(tag, text);
 }
 
+function activate() {
+  // input으로 입력받은 숫자를 3개의 숫자로 쪼개는 로직 -> 나누기를 이용할 예정, 키 입력 내부에 있어야 됨
+  let inputA = Math.floor(input.value / 100);
+  let inputB = Math.floor(input.value.slice(1) / 10);
+  let inputC = Number(input.value.slice(2));
+  let arrayInputValue = [inputA, inputB, inputC];
+
+  let compareA = arrayRandomNum.indexOf(inputA);
+  let compareB = arrayRandomNum.indexOf(inputB);
+  let compareC = arrayRandomNum.indexOf(inputC);
+
+  console.log(arrayInputValue);
+
+  // 입력값과 랜덤 숫자 비교 로직 생성
+  function compare() {
+    let strike = 0;
+    let ball = 0;
+
+    if (compareA === 0) {
+      strike++;
+    }
+    if (compareA === 1) {
+      ball++;
+    }
+    if (compareA === 2) {
+      ball++;
+    }
+    if (compareB === 1) {
+      strike++;
+    }
+    if (compareB === 0) {
+      ball++;
+    }
+    if (compareB === 2) {
+      ball++;
+    }
+    if (compareC === 2) {
+      strike++;
+    }
+    if (compareC === 0) {
+      ball++;
+    }
+    if (compareC === 1) {
+      ball++;
+    }
+
+    tagMaker("div", left, `${strike} strike ${ball} ball`);
+  }
+
+  compare();
+}
 // 엔터키 입력 시 이벤트 설정
 window.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
-    // input으로 입력받은 숫자를 3개의 숫자로 쪼개는 로직 -> 나누기를 이용할 예정, 키 입력 내부에 있어야 됨
-    let inputA = Math.floor(input.value / 100);
-    let inputB = Math.floor(input.value.slice(1) / 10);
-    let inputC = Number(input.value.slice(2));
-    let arrayInputValue = [inputA, inputB, inputC];
-
-    let compareA = arrayRandomNum.indexOf(inputA);
-    let compareB = arrayRandomNum.indexOf(inputB);
-    let compareC = arrayRandomNum.indexOf(inputC);
-
-    console.log(arrayInputValue);
-
-    // 입력값과 랜덤 숫자 비교 로직 생성
-    function compare() {
-      let strike = 0;
-      let ball = 0;
-
-      if (compareA === 0) {
-        strike++;
-      }
-      if (compareA === 1) {
-        ball++;
-      }
-      if (compareA === 2) {
-        ball++;
-      }
-      if (compareB === 1) {
-        strike++;
-      }
-      if (compareB === 0) {
-        ball++;
-      }
-      if (compareB === 2) {
-        ball++;
-      }
-      if (compareC === 2) {
-        strike++;
-      }
-      if (compareC === 0) {
-        ball++;
-      }
-      if (compareC === 1) {
-        ball++;
-      }
-
-      tagMaker("div", left, `${strike} strike ${ball} ball`);
-    }
-
-    compare();
-  }
-});
+    activate();
+}});
 
 // 버튼 클릭 시 리셋
 btn.addEventListener("click", () => {
