@@ -4,25 +4,31 @@ const count = document.getElementById("count");
 const input = document.getElementById("input");
 
 //랜덤한 3자리 숫자 생성 , 3자리 숫자는 100*a + 10*b + c 의 형태로 구성
-let a = Math.floor(Math.random() * 9 + 1);
-let b = 0;
-let c = 0;
-while (true) {
-  b = Math.floor(Math.random() * 10);
-  if (a !== b) {
-    break;
+let RandomNum = 0;
+
+function aaa() {
+  let a = Math.floor(Math.random() * 9 + 1);
+  let b = 0;
+  let c = 0;
+  while (true) {
+    b = Math.floor(Math.random() * 10);
+    if (a !== b) {
+      break;
+    }
   }
-}
-while (true) {
-  c = Math.floor(Math.random() * 10);
-  if (a !== c && b !== c) {
-    break;
+  while (true) {
+    c = Math.floor(Math.random() * 10);
+    if (a !== c && b !== c) {
+      break;
+    }
   }
+
+  let arrayRandomNum = [a, b, c];
+
+  RandomNum = 100 * a + 10 * b + c;
 }
 
-let arrayRandomNum = [a, b, c];
-
-let RandomNum = 100 * a + 10 * b + c;
+aaa();
 
 // 입력값과 랜덤 숫자 비교 로직 생성
 function compareNum() {}
