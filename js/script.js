@@ -103,3 +103,7 @@ btn.addEventListener("click", () => {
   makeRandomNum();
   left.replaceChildren();
 });
+
+enter.addEventListener("click", ()=>{
+  activate();
+});
