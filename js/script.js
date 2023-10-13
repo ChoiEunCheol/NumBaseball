@@ -43,4 +43,8 @@ window.addEventListener("keydown", (e) => {
     let arrayInputValue = [inputA, inputB, inputC];
     console.log(RandomNum);
   }
+  if (e.key === "q"){
+    aaa();
+    console.log(RandomNum);
+  }
 });
