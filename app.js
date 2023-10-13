@@ -12,3 +12,5 @@ const server = http.createServer((request,response)=>{
     response.writeHead(200, contextType);
     response.end("ㅇㅇ");
 })
+
+server.listen(8080);
