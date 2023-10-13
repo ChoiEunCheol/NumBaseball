@@ -24,7 +24,7 @@ window.addEventListener('keydown',e => {
         // input으로 입력받은 숫자를 3개의 숫자로 쪼개는 로직 -> 나누기를 이용할 예정, 키 입력 내부에 있어야 됨
         let inputA = Math.floor(input.value/100);
         let inputB = Math.floor(input.value.slice(1)/10);
-        let inputC = input.value.slice(2);
+        let inputC = Number(input.value.slice(2));
 
         let arrayInputValue = [inputA, inputB, inputC];
 
