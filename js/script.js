@@ -2,7 +2,7 @@ const left = document.getElementById("left");
 const best = document.getElementById("best");
 const count = document.getElementById("count");
 const input = document.getElementById("input");
-const btn = document.getElementById('button');
+const btn = document.getElementById("button");
 
 //랜덤한 3자리 숫자 생성 , 3자리 숫자는 100*a + 10*b + c 의 형태로 구성
 let RandomNum = 0;
@@ -25,10 +25,9 @@ function makeRandomNum() {
     }
   }
 
-    arrayRandomNum[0] = a;
-    arrayRandomNum[1] = b;
-    arrayRandomNum[2] = c;
-
+  arrayRandomNum[0] = a;
+  arrayRandomNum[1] = b;
+  arrayRandomNum[2] = c;
 
   RandomNum = 100 * a + 10 * b + c;
 }
@@ -36,10 +35,10 @@ function makeRandomNum() {
 makeRandomNum();
 
 // 태그 생성 함수
-function tagMaker (tagname,parentsTag,text){
-    const tag = document.createElement(tagname)
-    parentsTag.append(tag,text)
-};
+function tagMaker(tagname, parentsTag, text) {
+  const tag = document.createElement(tagname);
+  parentsTag.append(tag, text);
+}
 
 // 엔터키 입력 시 이벤트 설정
 window.addEventListener("keydown", (e) => {
@@ -55,51 +54,49 @@ window.addEventListener("keydown", (e) => {
     let compareC = arrayRandomNum.indexOf(inputC);
 
     console.log(arrayInputValue);
-    
-    // 입력값과 랜덤 숫자 비교 로직 생성
-    function compare(){
-        let strike = 0;
-        let ball = 0;
 
-        if (compareA === 0){
-            strike ++;
-        }
-        if (compareA === 1){
-            ball ++;
-        }
-        if (compareA === 2){
-            ball ++;
-        }
-        if (compareB === 1){
-            strike ++;
-        }
-        if (compareB === 0){
-            ball ++;
-        }
-        if (compareB === 2){
-            ball ++;
-        }
-        if (compareC === 2){
-            strike ++;
-        }
-        if (compareC === 0){
-            ball ++;
-        }
-        if (compareC === 1){
-            ball ++;
-        }
-        
-        tagMaker('div',left,`${strike} strike ${ball} ball`);
-    };
+    // 입력값과 랜덤 숫자 비교 로직 생성
+    function compare() {
+      let strike = 0;
+      let ball = 0;
+
+      if (compareA === 0) {
+        strike++;
+      }
+      if (compareA === 1) {
+        ball++;
+      }
+      if (compareA === 2) {
+        ball++;
+      }
+      if (compareB === 1) {
+        strike++;
+      }
+      if (compareB === 0) {
+        ball++;
+      }
+      if (compareB === 2) {
+        ball++;
+      }
+      if (compareC === 2) {
+        strike++;
+      }
+      if (compareC === 0) {
+        ball++;
+      }
+      if (compareC === 1) {
+        ball++;
+      }
+
+      tagMaker("div", left, `${strike} strike ${ball} ball`);
+    }
 
     compare();
-    
-  };
+  }
 });
 
 // 버튼 클릭 시 리셋
-btn.addEventListener('click',()=>{
-    makeRandomNum();
-    console.log(RandomNum);
-    left.replaceChildren();
-})
+btn.addEventListener("click", () => {
+  makeRandomNum();
+  left.replaceChildren();
+});
