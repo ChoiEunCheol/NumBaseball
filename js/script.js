@@ -8,11 +8,11 @@ const input = document.getElementById('input');
     let b = Math.floor(Math.random()*10);
     let c = Math.floor(Math.random()*10);
 
+    let RandomNum = 100*a+10*b+c;
+
 // 엔터키 입력 시 이벤트 설정
 window.addEventListener('keydown',e => {
     if (e.key === "Enter"){
-        let a = Math.floor(Math.random()*9+1);
-
-        console.log(a);
+        console.log(RandomNum);
     }
 });
