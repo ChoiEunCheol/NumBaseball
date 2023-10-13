@@ -43,16 +43,15 @@ window.addEventListener("keydown", (e) => {
     let inputC = Number(input.value.slice(2));
     let arrayInputValue = [inputA, inputB, inputC];
 
-    // 입력값과 랜덤 숫자 비교 로직 생성
-    function compare(x){
-        arrayRandomNum.indexOf(x);
-    }
+    let srtike = 0;
+    let ball = 0;
 
-    function matching() {
-        console.log(compare);
-    }
-    
-    matching();
+    // 입력값과 랜덤 숫자 비교 로직 생성
+    function compare(){
+        console.log(arrayRandomNum.indexOf(inputA));
+    };
+
+    compare();
   }
   if (e.key === "q"){
     makeRandomNum();
