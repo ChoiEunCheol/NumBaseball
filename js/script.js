@@ -92,11 +92,6 @@ function activate() {
 
   compare();
 }
-// 엔터키 입력 시 이벤트 설정
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    activate();
-}});
 
 // 버튼 클릭 시 리셋
 btn.addEventListener("click", () => {
