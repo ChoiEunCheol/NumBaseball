@@ -4,7 +4,7 @@
   display: flex;
 }
 #root #left {
-  width: 70vw;
+  width: 50vw;
   height: 100vh;
   background-color: violet;
 }
