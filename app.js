@@ -11,9 +11,8 @@ let data = fs.readFileSync('./index.html',contextType);
 
 // 서버 생성
 const server = http.createServer((request,response)=>{
-    if(request.method === 'GET' && request.url === '/'){
+    if(request.method === 'GET' && request.url === '/js/'){
         response.writeHead(200, contextType);
-        response.write(fs.readFileSync('./js.script.js',contextType), contextType);
         response.end(data);
     } else{
         response.writeHead(404, contextType);
