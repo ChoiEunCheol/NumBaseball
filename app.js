@@ -19,6 +19,10 @@ const server = http.createServer((request,response)=>{
         response.writeHead(200, contextType);
         response.end(fs.readFileSync('./js/script.js',contextType));
     }
+    else if(request.method === 'GET' && request.url === '/style/style.css'){
+        response.writeHead(200, contextType);
+        response.end(fs.readFileSync('./style/style.css',contextType));
+    }
     else{
         response.writeHead(404, contextType);
         response.end("주소 확인!");
