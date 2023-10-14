@@ -13,6 +13,7 @@ let data = fs.readFileSync('./index.html',contextType);
 const server = http.createServer((request,response)=>{
     if(request.method === 'GET' && request.url === '/'){
         response.writeHead(200, contextType);
+        response.write(fs.readFileSync('./js.script.js',contextType), contextType);
         response.end(data);
     } else{
         response.writeHead(404, contextType);
