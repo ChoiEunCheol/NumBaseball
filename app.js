@@ -16,12 +16,12 @@ const server = http.createServer((request,response)=>{
         response.end(data);
     } 
     else if(request.method === 'GET' && request.url === '/js/script.js'){
-        response.writeHead(200, contextType);
-        response.end(fs.readFileSync('./js/script.js',contextType));
+        response.writeHead(200);
+        response.end(fs.readFileSync('./js/script.js'));
     }
     else if(request.method === 'GET' && request.url === '/style/style.css'){
-        response.writeHead(200, contextType);
-        response.end(fs.readFileSync('./style/style.css',contextType));
+        response.writeHead(200);
+        response.end(fs.readFileSync('./style/style.css'));
     }
     else{
         response.writeHead(404, contextType);
