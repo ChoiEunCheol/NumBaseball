@@ -7,21 +7,23 @@ const contextType = {
     'Content-Type': 'text/html; charset=utf-8'
 };
 
-let data = fs.readFileSync('./index.html',contextType);
+function read(x) {
+    fs.readFileSync(x,contextType)
+}
 
 // 서버 생성
 const server = http.createServer((request,response)=>{
     if(request.method === 'GET' && request.url === '/'){
         response.writeHead(200, contextType);
-        response.end(data);
+        response.end(read('./index.html'));
     } 
     else if(request.method === 'GET' && request.url === '/js/script.js'){
         response.writeHead(200, contextType);
-        response.end(fs.readFileSync('./js/script.js',contextType));
+        response.end(read('./js/script.js'));
     }
     else if(request.method === 'GET' && request.url === '/style/style.css'){
         response.writeHead(200, contextType);
-        response.end(fs.readFileSync('./style/style.css',contextType));
+        response.end(read('./style/style.css'));
     }
     else{
         response.writeHead(404, contextType);
